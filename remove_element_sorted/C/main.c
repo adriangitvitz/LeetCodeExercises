@@ -18,7 +18,6 @@ void printarr(int arr[], int size) {
 }
 
 int main(void) {
-  ;
   int nums[] = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
   int size = *(&nums + 1) - nums;
   int k = removeDuplicates(nums, size);
