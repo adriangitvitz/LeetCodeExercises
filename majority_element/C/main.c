@@ -8,7 +8,6 @@ int majorityElement(int *nums, int numsSize) {
     if (nums[i] > 0) {
       int h_f = nums[i] % numsSize;
       h_t[h_f]++;
-      printf("%d, %d\n", h_t[h_f], nums[i]);
       if (h_t[h_f] > (numsSize / 2)) {
         return nums[i];
       }
