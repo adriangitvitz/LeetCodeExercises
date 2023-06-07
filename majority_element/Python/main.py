@@ -3,12 +3,11 @@ def majorityElement(nums: list) -> int:
     num_size: int = len(nums)
     for v in nums:
         if v > 0:
-            f = v % num_size
-            if f in frequencies:
-                frequencies[f] += 1
+            if v in frequencies:
+                frequencies[v] += 1
             else:
-                frequencies[f] = 1
-            if frequencies[f] > (num_size // 2):
+                frequencies[v] = 1
+            if frequencies[v] > (num_size // 2):
                 return v
     return 1
 
@@ -28,7 +27,7 @@ def majorityElement(nums: list) -> int:
 
 
 def main():
-    nums: list = [2, 2, 1, 1, 1, 2, 2]
+    nums: list = [3, 2, 3]
     k: int = majorityElement(nums)
     print(k)
 
